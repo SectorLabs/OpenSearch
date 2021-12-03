@@ -88,6 +88,13 @@ distribution_archives {
     }
   }
 
+  darwinArm64Tar {
+    archiveClassifier = 'darwin-arm64'
+    content {
+      archiveFiles(modulesFiles('darwin-arm64'), 'tar', 'darwin', 'arm64', true)
+    }
+  }
+
   darwinTar {
     archiveClassifier = 'darwin-x64'
     content {

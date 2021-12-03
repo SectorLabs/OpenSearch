@@ -353,7 +353,7 @@ configure(subprojects.findAll { ['archives', 'packages'].contains(it.name) }) {
           }
         }
         def buildModules = buildModulesTaskProvider
-        List excludePlatforms = ['darwin-x64', 'freebsd-x64', 'linux-x64', 'linux-arm64', 'windows-x64']
+        List excludePlatforms = ['darwin-x64', 'darwin-arm64', 'freebsd-x64', 'linux-x64', 'linux-arm64', 'windows-x64']
         if (platform != null) {
           excludePlatforms.remove(excludePlatforms.indexOf(platform))
         } else {
@@ -622,6 +622,7 @@ subprojects {
 }
 
 ['archives:darwin-tar',
+ 'archives:darwin-arm64-tar',
  'archives:integ-test-zip',
  'archives:linux-arm64-tar',
  'archives:linux-tar',
